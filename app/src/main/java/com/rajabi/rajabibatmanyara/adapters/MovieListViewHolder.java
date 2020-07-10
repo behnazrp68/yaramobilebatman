@@ -9,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.rajabi.rajabibatmanyara.R;
 
-class RecyclerViewViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+class MovieListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    RecyclerViewClickListener mListener;
+    MovieListClickListener mListener;
     ImageView imgView_icon;
     TextView txtView_title;
     TextView txtView_year;
     TextView txtView_type;
 
-    public RecyclerViewViewHolder(@NonNull View itemView, RecyclerViewClickListener mListener) {
+    public MovieListViewHolder(@NonNull View itemView, MovieListClickListener mListener) {
         super(itemView);
         this.mListener = mListener;
         itemView.setOnClickListener(this);

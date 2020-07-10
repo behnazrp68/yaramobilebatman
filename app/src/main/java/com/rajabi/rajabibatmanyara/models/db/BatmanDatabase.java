@@ -13,20 +13,20 @@ import com.rajabi.rajabibatmanyara.models.dao.MovieListDao;
 
 
 @Database(entities = {MovieListEntity.class, DetailMovieEntity.class}, version = 1)
-public abstract class MovieListDatabase extends RoomDatabase {
+public abstract class BatmanDatabase extends RoomDatabase {
     public abstract MovieListDao movielistdao();
 
     public abstract DetailMovieDao detailMovielistdao();
 
-    private static MovieListDatabase INSTANCE;
+    private static BatmanDatabase INSTANCE;
 
 
-    public static MovieListDatabase getDatabase(final Context context) {
+    public static BatmanDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
-            synchronized (MovieListDatabase.class) {
+            synchronized (BatmanDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            MovieListDatabase.class, "movie_database")
+                            BatmanDatabase.class, "movie_database")
                             .addCallback(sRoomDatabaseCallback)
                             .build();
 

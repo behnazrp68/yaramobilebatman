@@ -12,7 +12,7 @@ public class MovieListRoomRepository {
     LiveData<List<MovieListEntity>> mAllPosts;
 
     public MovieListRoomRepository(Application application) {
-        MovieListDatabase db = MovieListDatabase.getDatabase(application);
+        BatmanDatabase db = BatmanDatabase.getDatabase(application);
         movieListDao = db.movielistdao();
         mAllPosts = movieListDao.getAllPosts();
     }

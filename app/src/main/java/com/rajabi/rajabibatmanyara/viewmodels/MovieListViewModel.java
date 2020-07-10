@@ -6,7 +6,7 @@ import android.content.Intent;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.rajabi.rajabibatmanyara.adapters.RecyclerViewClickListener;
+import com.rajabi.rajabibatmanyara.adapters.MovieListClickListener;
 import com.rajabi.rajabibatmanyara.models.db.MovieListEntity;
 import com.rajabi.rajabibatmanyara.models.db.MovieListRoomRepository;
 import com.rajabi.rajabibatmanyara.networking.MovieListWebServiceRepository;
@@ -35,9 +35,9 @@ public class MovieListViewModel extends AndroidViewModel {
         return mAllPosts;
     }
 
-    public RecyclerViewClickListener itemClicked() {
+    public MovieListClickListener itemClicked() {
 
-        RecyclerViewClickListener listener = (view, position) -> {
+        MovieListClickListener listener = (view, position) -> {
 
             Intent intent = new Intent(view.getContext(), DetailActivity.class);
             intent.putExtra("imdbID", mAllPosts.getValue().get(position).imdbID);

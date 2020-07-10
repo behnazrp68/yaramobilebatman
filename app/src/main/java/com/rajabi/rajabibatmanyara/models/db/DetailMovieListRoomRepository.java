@@ -14,7 +14,7 @@ public class DetailMovieListRoomRepository {
     LiveData<List<DetailMovieEntity>> mAllPosts;
 
     public DetailMovieListRoomRepository(Application application, String imdbID) {
-        MovieListDatabase db = MovieListDatabase.getDatabase(application);
+        BatmanDatabase db = BatmanDatabase.getDatabase(application);
         movieListDao = db.detailMovielistdao();
         mAllPosts = movieListDao.getDetailMovie(imdbID);
     }
