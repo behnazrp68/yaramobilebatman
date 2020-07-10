@@ -13,7 +13,7 @@ public class DetailViewHolder extends RecyclerView.ViewHolder {
 
     ImageView imgView_icon;
     TextView txtView_title;
-    TextView txtView_year;
+    TextView txtView_awards;
     TextView txtView_rated;
     TextView txtView_Genre;
     TextView txtView_Plot;
@@ -35,7 +35,7 @@ public class DetailViewHolder extends RecyclerView.ViewHolder {
         imgView_icon = itemView.findViewById(R.id.thumbnail);
         imgView_icon.setClickable(false);
         txtView_title = itemView.findViewById(R.id.title);
-        txtView_year = itemView.findViewById(R.id.year);
+        txtView_awards = itemView.findViewById(R.id.awards);
         txtView_rated = itemView.findViewById(R.id.rated);
         txtView_Actors = itemView.findViewById(R.id.actors);
         txtView_Director = itemView.findViewById(R.id.director);

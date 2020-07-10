@@ -43,13 +43,13 @@ public class DetailMovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         DetailMovieEntity currentMovie = detailMovie.get(position);
         ((DetailViewHolder) holder).txtView_title.setText(currentMovie.getTitle());
-        ((DetailViewHolder) holder).txtView_year.setText(currentMovie.getYear());
-        ((DetailViewHolder) holder).txtView_rated.setText(currentMovie.getActors());
-        ((DetailViewHolder) holder).txtView_Retained.setText(currentMovie.getRated());
-        ((DetailViewHolder) holder).txtView_Actors.setText(currentMovie.getDirector());
+        ((DetailViewHolder) holder).txtView_awards.setText("Awards : "+currentMovie.getAwards());
+        ((DetailViewHolder) holder).txtView_rated.setText(currentMovie.getRated());
+        ((DetailViewHolder) holder).txtView_Retained.setText("Rated : "+currentMovie.getRated());
+        ((DetailViewHolder) holder).txtView_Actors.setText("Actors : "+currentMovie.getActors());
         ((DetailViewHolder) holder).txtView_Plot.setText(currentMovie.getPlot());
-        ((DetailViewHolder) holder).txtView_Genre.setText(currentMovie.getGenre());
-        ((DetailViewHolder) holder).txtView_Director.setText(currentMovie.getDirector());
+        ((DetailViewHolder) holder).txtView_Genre.setText("Genre : "+currentMovie.getGenre());
+        ((DetailViewHolder) holder).txtView_Director.setText("Director : "+currentMovie.getDirector());
         ((DetailViewHolder) holder).txtView_Runtime.setText(currentMovie.getRuntime());
         ((DetailViewHolder) holder).txtView_Released.setText(currentMovie.getReleased());
         Picasso.get().load(currentMovie.getPoster()).into(((DetailViewHolder) holder).imgView_icon);

@@ -187,6 +187,7 @@ public class MovieListWebServiceRepository {
             mMovieModel.setTitle(object.getString("Title"));
             mMovieModel.setPoster(object.getString("Poster"));
             mMovieModel.setRated(object.getString("Rated"));
+            mMovieModel.setAwards(object.getString("Awards"));
             mMovieModel.setReleased(object.getString("Released"));
             mMovieModel.setRuntime(object.getString("Runtime"));
             apiResults.add(mMovieModel);
